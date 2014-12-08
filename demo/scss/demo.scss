@@ -1,0 +1,87 @@
+//@import here
+@import 'bskyb-typography/dist/scss/typography';
+@import "src/scss/grid";
+/* Common demo Sass here */
+.demo-updated {
+  display: block;
+  font-size: 0.3em;
+}
+
+.demo-block{
+  margin-bottom: 20px;
+  display: block;
+  clear: both;
+}
+
+
+//your demo specific scss here
+
+.grid-example {
+  width: 106%;
+  margin-left: -3%
+}
+
+#grid12,#grid12-1140,#grid12-tablet,#grid12-actual,#grid12-contents,#grid12-lightbox {
+  height: 200px
+}
+
+#grid12,#grid12-1140,#grid12-tablet,#grid12-lightbox {
+  background: #EDF6FF;
+  padding: 0 3%;
+  max-width: 974px
+}
+
+#grid12 .skycom-1,#grid12-1140 .skycom-1,#grid12-tablet .skycom-1,#grid12-lightbox .skycom-1 {
+  height: 100%
+}
+
+#grid12 .cushioned,#grid12 .cushioned div,#grid12-1140 .cushioned,#grid12-1140 .cushioned div,#grid12-tablet .cushioned,#grid12-tablet .cushioned div,#grid12-lightbox .cushioned,#grid12-lightbox .cushioned div {
+  background: #FFE1E1;
+  height: 100%;
+  box-sizing: border-box
+}
+
+#grid12 .cushioned div,#grid12-1140 .cushioned div,#grid12-tablet .cushioned div,#grid12-lightbox .cushioned div {
+  background: #FFD5D6
+}
+
+#grid12-actual {
+  background: #EDF6FF
+}
+
+#grid12-actual .skycom-1 {
+  height: 100%
+}
+
+#grid12-actual .cushioned,#grid12-actual .cushioned div {
+  background: #FFE1E1;
+  height: 100%;
+  box-sizing: border-box
+}
+
+#grid12-actual .cushioned div {
+  background: #FFD5D6
+}
+
+#grid12-1140 {
+  max-width: 1212px;
+  width: 94.35%
+}
+
+#grid12-tablet {
+  max-width: 696px
+}
+
+@media (max-width: 767px) {
+  .grid-example {
+    width:102%
+  }
+
+  #grid12,#grid12-1140,#grid12-tablet,#grid12-actual,#grid12-contents,#grid12-lightbox {
+    height: auto
+  }
+}
+
+.lt-ie8 #grid12 .cushioned,.lt-ie8 #grid12-1140 .cushioned,.lt-ie8 #grid12-tablet .cushioned,.lt-ie8 #grid12-actual .cushioned,.lt-ie8 #grid12-contents .cushioned,.lt-ie8 #grid12-lightbox .cushioned {
+  height: 80%
+}
