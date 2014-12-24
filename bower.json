@@ -7,13 +7,14 @@
         "Sky.com <dl-skycom@bskyb.com>"
     ],
     "description": "grid for use across Sky.com",
-    "main": "dist",
-    "license": "MIT",
+    "main": "src/scss/grid.scss",
+    "license": "BSD3",
     "ignore": [
         "**/*",
-        "!dist/**/*"
+        "!dist/**/*",
+        "!src/**/*"
     ],
     "devDependencies": {
-        "bskyb-typography": "~0.0.6"
+        "bskyb-typography": "~0.1.0"
     }
 }

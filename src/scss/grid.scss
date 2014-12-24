@@ -1,15 +1,18 @@
 @import "variables";
 
+body {
+  margin: 0;  padding: 0;
+}
+
 .skycom-container {
   width: ($container-width/$width-plus-gutters)*100%;
-  max-width: $container-width-thin;
+  max-width: $container-width;
   margin: 0 auto;
   clear: left;
   overflow: visible;
 }
-.grid-1140 .skycom_container, //hack for masthead
-.grid-1140 .skycom-container{
-  max-width: $container-width;
+.grid-974 .skycom-container{ //deprecate - for now, allow people to chose a smaller grid :(
+  max-width: $container-width-thin;
 }
 
 .skycom-12, .skycom-11,
@@ -27,7 +30,7 @@
   clear: both;
 }
 
-.alpha,
+.alpha, //deprecated - as ie7 is no longer supported
 .skycom-12:first-child, .skycom-11:first-child,
 .skycom-10:first-child, .skycom-9:first-child,
 .skycom-8:first-child, .skycom-7:first-child,
@@ -39,12 +42,12 @@
 }
 
 @for $i from 1 through 12 { //must loop backwards i.e. 13-1
-  .skycom-#{13-$i} .cushioned { padding:($textIndent/(($column-plus-gutter * (13 - $i)) - $gutter)) * 100%; }
-  .skycom-#{13-$i} { width: ((($column-plus-gutter * (13 - $i)) - $gutter)/$container-width) * 100%; }
+  .skycom-#{13-$i} .cushioned { @include skycom-cushion($i) }
+  .skycom-#{13-$i} { @include skycom($i) }
 }
 
-@for $i from 1 through 11
-{  .skycom-offset#{$i},.skycom-offset#{$i}:first-child { margin-left: (($column-plus-gutter * $i)/$container-width) * 100%; }
+@for $i from 1 through 11 {
+  .skycom-offset#{$i},.skycom-offset#{$i}:first-child { @include skycom-offset($i) } //wrong???
   .skycom-offset#{$i}.alpha { margin-left: ((($column-plus-gutter * $i) - $gutter)/$container-width) * 100%; }
 }
 
@@ -66,7 +69,8 @@ body.lt-ie9 {
 }
 
 
-
+//deprecate - all of this and get people to use the Sass mixins
+$mobile-width: 767px;
 @media (max-width: $mobile-width) {
   body {
     width: 100%;

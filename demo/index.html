@@ -8,17 +8,37 @@
 </head>
 <body>
 
-<h1>Grid
-    <small  class="demo-version text--secondary">v{{ site.version }}
-        <a href="https://github.com/skyglobal/grid" class="text--secondary">
-            <span class="demo-icon demo-icon--github"  aria-hidden=true></span>
-            <span class="speak">Github Repo</span>
-        </a></small>
-</h1>
+<div class="skycom-container">
+
+    <h1>Grid
+        <small  class="demo-version text--secondary">v{{ site.version }}
+            <a href="https://github.com/skyglobal/grid" class="text--secondary">
+                <span class="demo-icon demo-icon--github"  aria-hidden=true></span>
+                <span class="speak">Github Repo</span>
+            </a></small>
+    </h1>
+
+    <p>
+        A fluid grid, divided into equal parts which should be applied across all devices.
+    </p>
 
 
-Your starting point is a universal grid, divided into equal parts. It should be applied across all devices. This grid show is fluid and proportionally scales to fit any screen size. For more information please read the
-<strong><a href="#notes">notes.</a></strong>
-
-
+    <ul class="list list--grey">
+        <li>
+            The grid is wrapped with '<code>skycom-container</code>' which should be used to contain all your content, or individual modules.
+        </li>
+        <li>
+            The container is made up of up 12 columns '<code>skycom-1</code>' through to '<code>skycom-12</code>'. In Sass <code>@include skycom(1)</code> etc.
+        </li>
+        <li>
+            To float a column on the right, add the class '<code>right</code>'.
+        </li>
+        <li>
+            To offset a column, add the class '<code>skycom-offset1</code>' through to '<code>skycom-offset12</code>'. In  Sass <code>@include skycom-offset(1)</code> etc.
+        </li>
+        <li>
+            When the text shouldn't touch the edges of the columns use '<code>cushioned</code>' class for padding. In  Sass <code>@include skycom-cushion(1)</code> etc.
+        </li>
+    </ul>
+</div>
 
