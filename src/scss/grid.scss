@@ -42,8 +42,8 @@ body {
 }
 
 @for $i from 1 through 12 { //must loop backwards i.e. 13-1
-  .skycom-#{13-$i} .cushioned { @include skycom-cushion($i) }
-  .skycom-#{13-$i} { @include skycom($i) }
+  .skycom-#{13-$i} .cushioned { @include skycom-cushion(13 - $i) }
+  .skycom-#{13-$i} { @include skycom(13 - $i) }
 }
 
 @for $i from 1 through 11 {

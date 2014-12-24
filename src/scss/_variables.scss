@@ -11,10 +11,10 @@ $column-plus-gutter: $column + $gutter;
 //Sass Mixins
 /* returns the width of that coloumn count */
 @mixin skycom($columnCount) {
-  width : ((($column-plus-gutter * (13 - $columnCount)) - $gutter)/$container-width) * 100%;
+  width : ((($column-plus-gutter * ($columnCount)) - $gutter)/$container-width) * 100%;
 }
 @mixin skycom-cushion($columnCount) {
-  padding:($textIndent/(($column-plus-gutter * (13 - $columnCount)) - $gutter)) * 100%;
+  padding:($textIndent/(($column-plus-gutter * ($columnCount)) - $gutter)) * 100%;
 }
 @mixin skycom-offset($columnCount) {
   margin-left: (($column-plus-gutter * $columnCount)/$container-width) * 100%;
