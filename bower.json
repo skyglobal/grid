@@ -15,6 +15,6 @@
         "!src/**/*"
     ],
     "devDependencies": {
-        "bskyb-typography": "~0.1.0"
+        "bskyb-core": "~0.0.2"
     }
 }
