@@ -9,7 +9,7 @@ See http://skyglobal.github.io/grid/ for a demo
 
 ### As CSS
 
-http://web-toolkit.global.sky.com/components/grid/0.1.0/css/grid.css
+http://web-toolkit.global.sky.com/components/grid/0.2.0/css/grid.css
 
 ### As a Sass Module
 
