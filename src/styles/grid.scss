@@ -11,6 +11,12 @@ body {
   clear: left;
   overflow: visible;
 }
+
+.grid-1140 .skycom-container { //Hack for masthead
+  max-width: $container-width;
+}
+
+}
 .grid-974 .skycom-container{ //deprecate - for now, allow people to chose a smaller grid :(
   max-width: $container-width-thin;
 }
